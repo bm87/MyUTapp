@@ -38,10 +38,13 @@ public class Login extends Activity {
     // String URL_connect="http://www.scandroidtest.site90.com/acces.php";
     //String IP_Server="192.168.60.213";//IP DE NUESTRO PC
     //String URL_connect="http://"+IP_Server+"/droidlogin/acces.php";//ruta en donde estan nuestros archivos
-    String URL_connect="http://www.imaginetech.com.mx/pruebas/acces.php";
+    String URL_connect="http://www.imaginetech.com.mx/pruebas/hola/acces.php";
 
     boolean result_back;
     private ProgressDialog pDialog;
+    private JSONObject json_data; //creamos un objeto JSON
+    public String materias;
+    public JSONArray jdata;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -115,7 +118,7 @@ public class Login extends Activity {
         postparameters2send.add(new BasicNameValuePair("password",password));
 
         //realizamos una peticion y como respuesta obtenes un array JSON
-        JSONArray jdata=post.getserverdata(postparameters2send, URL_connect);
+        jdata=post.getserverdata(postparameters2send, URL_connect);
 
       		/*como estamos trabajando de manera local el ida y vuelta sera casi inmediato
       		 * para darle un poco realismo decimos que el proceso se pare por unos segundos para poder
@@ -127,10 +130,20 @@ public class Login extends Activity {
         //si lo que obtuvimos no es null
         if (jdata!=null && jdata.length() > 0){
 
-            JSONObject json_data; //creamos un objeto JSON
+            // JSONObject json_data; //creamos un objeto JSON
             try {
                 json_data = jdata.getJSONObject(0); //leemos el primer segmento en nuestro caso el unico
                 logstatus=json_data.getInt("logstatus");//accedemos al valor
+                //materias = jdata.getJSONObject(0).getString("materia");
+ /*
+                json_data = jdata.getJSONObject(0);
+                materias[0] = json_data.getString("materia");
+
+                materias = new String[6];
+                for(int x=0;x<=json_data.length()-1;x++){
+                  materias[x] = json_data.getString("materia");
+                }*/
+
                 Log.e("loginstatus","logstatus= "+logstatus);//muestro por log que obtuvimos
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
@@ -215,6 +228,9 @@ public class Login extends Activity {
 
                 Intent i=new Intent(Login.this, HiScreen.class);
                 i.putExtra("user",user);
+               // i.putExtra("arrMaterias",jdata.toString());
+
+
                 startActivity(i);
 
             }else{

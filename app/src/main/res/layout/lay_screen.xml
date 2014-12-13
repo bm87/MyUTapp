@@ -11,31 +11,31 @@ android:weightSum="1">
 
 <TextView android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:textColor="#21610B"
+    android:textColor="#ff020501"
     android:layout_marginTop="15dip"
     android:gravity="center"
     android:textSize="25dip"
-    android:text="!Bienvenido!"
+    android:text="Bienvenido"
 
-    />
+     />
 
 
 <TextView
     android:id="@+id/usr_name"
     android:layout_height="wrap_content"
-    android:layout_width="fill_parent"
-    android:textColor="#FF4000"
-    android:layout_marginTop="45dip"
-    android:textSize="22dip"
-    android:gravity="center"
+    android:layout_width="166dp"
+    android:textColor="#fd030100"
+    android:layout_marginTop="10dp"
+    android:textSize="23dip"
 
-    />
+    android:layout_gravity="center_horizontal"
+    android:gravity="center" />
 
-<ListView
+    <ListView
     android:layout_width="wrap_content"
-    android:layout_height="286dp"
+    android:layout_height="241dp"
     android:id="@+id/calis"
-    android:layout_weight="0.54" />
+    android:choiceMode="singleChoice" />
 
 
 
@@ -44,8 +44,8 @@ android:weightSum="1">
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dip"
-        android:text="Login"
+        android:layout_marginTop="25dip"
+        android:text="Salir"
         android:id="@+id/logoff"
         />
 
