@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MyUTapp</string>
+    <string name="app_name">MyUTApp</string>
+    <string name="u">braulio</string>
+    <string name="p">123</string>
 
     <string name="action_settings">Settings</string>
 

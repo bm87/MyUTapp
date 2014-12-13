@@ -31,16 +31,18 @@ public class HiScreen extends Activity{
         Bundle extras = getIntent().getExtras();
 
         listview = (ListView) findViewById(R.id.calis);
-        String materias = extras.getString("materias");
+        //String materias = extras.getString("arrMaterias");
+        ArrayList<String> materias = extras.getStringArrayList("arrMaterias");
+
         //String[] materias = new String[] { "Mercury", "Venus", "Earth", "Mars",
-               // "Jupiter", "Saturn", "Uranus", "Neptune"};
+          //      "Jupiter", "Saturn", "Uranus", "Neptune"};
 
 
 
-        ArrayList<String> lista = new ArrayList<String>();
-        lista.addAll(Arrays.asList(materias));
+       // ArrayList<String> lista = new ArrayList<String>();
+        //lista.addAll(Arrays.asList(materias));
 
-        final ArrayAdapter adapter = new ArrayAdapter(this,R.layout.textfields, lista);
+        final ArrayAdapter adapter = new ArrayAdapter(this,R.layout.textfields, materias);
         listview.setAdapter(adapter);
 
 
