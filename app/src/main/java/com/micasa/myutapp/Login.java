@@ -56,6 +56,8 @@ public class Login extends Activity {
         post=new Httppostaux();
         user= (EditText) findViewById(R.id.edusuario);
         pass= (EditText) findViewById(R.id.edpassword);
+
+
         blogin= (Button) findViewById(R.id.Blogin);
         registrar=(TextView) findViewById(R.id.link_to_register);
 //Login button action
@@ -64,6 +66,8 @@ public class Login extends Activity {
 //Extreamos datos de los EditText
                 String usuario=user.getText().toString();
                 String passw=pass.getText().toString();
+                ((EditText) findViewById(R.id.edusuario)).setText("");
+                ((EditText) findViewById(R.id.edpassword)).setText("");
 //verificamos si estan en blanco
                 if( checklogindata( usuario , passw )==true){
 //si pasamos esa validacion ejecutamos el asynctask pasando el usuario y clave como parametros
@@ -122,7 +126,7 @@ public class Login extends Activity {
 
                     String name = c.getString("nombre");
                     String calif   = c.getString("calif");
-                    String uno = name + "-"+calif;
+                    String uno = name + " "+calif;
 
 
                     productList.add(uno);
@@ -204,4 +208,6 @@ public class Login extends Activity {
             }
         }
     }
+
+
 }

@@ -65,6 +65,7 @@ public class HiScreen extends Activity{
 
             public void onClick(View view){
                 //'cerrar  sesion' nos regresa a la ventana anterior.
+
                 finish();
             }
         });

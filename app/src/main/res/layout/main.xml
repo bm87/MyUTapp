@@ -34,8 +34,7 @@
         android:singleLine="true"
         android:id="@+id/edusuario"
         android:background="@drawable/edittext_rounded_corners"
-        android:textColor="#ff020202"
-        />
+        android:textColor="#ff020202" />
 
     <!--  Password Label -->
 

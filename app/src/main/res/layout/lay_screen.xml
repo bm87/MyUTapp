@@ -27,7 +27,10 @@
         android:layout_width="wrap_content"
         android:layout_height="241dp"
         android:id="@+id/calis"
-        android:choiceMode="singleChoice" />
+        android:choiceMode="singleChoice"
+        android:textColor="#000000"
+        />
+
     />
     <Button
         android:layout_width="fill_parent"
