@@ -25,6 +25,7 @@
         android:textColor="#372c24"
         android:text="Usuario"
         android:layout_marginTop="25dip"
+        android:textSize="17dp"
         />
 
     <EditText android:layout_width="fill_parent"
@@ -41,7 +42,8 @@
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#372c24"
-        android:text="Password"/>
+        android:text="Password"
+        android:textSize="17dp" />
 
     <EditText android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -65,24 +67,16 @@
 
     <!-- Link to forgot passw -->
 
-    <TextView android:id="@+id/forgotpassw"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dip"
-        android:layout_marginBottom="40dip"
-        android:text="Olvido su Password?"
-        android:gravity="center"
-        android:textSize="20dip"
-        android:textColor="#0b84aa"/>
 
-    <!-- Link to Registration Screen -->
+
+    <!-- Link to Registration Screen-->
 
     <TextView android:id="@+id/link_to_register"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Registrarse!"
+        android:text="Registrarse"
         android:gravity="center"
         android:textSize="20dip"
-        android:textColor="#8A0808"/>
+        android:textColor="#fd030100"/>
 
 </LinearLayout>
